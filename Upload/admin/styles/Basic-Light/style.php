@@ -35,10 +35,10 @@ class Page extends DefaultPage
 		$trail = "";
 		foreach($this->_breadcrumb_trail as $key => $crumb)
 		{
-			if($this->_breadcrumb_trail[$key+1])
+			if(isset($this->_breadcrumb_trail[$key+1]))
 			{
 				$trail .= "<a href=\"".$crumb['url']."\">".$crumb['name']."</a>";
-				if($this->_breadcrumb_trail[$key+2])
+				if(isset($this->_breadcrumb_trail[$key+2]))
 				{
 					$trail .= " &raquo; ";
 				}
